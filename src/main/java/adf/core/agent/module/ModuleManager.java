@@ -73,12 +73,14 @@ public class ModuleManager {
 
       AbstractModule instance = this.moduleMap.get(className);
       if (instance != null) {
+        System.out.println("extends AbstractModule getMoudle" + instance);
         return (T) instance;
       }
 
       if (AbstractModule.class.isAssignableFrom(moduleClass)) {
         instance = this.getModule((Class<AbstractModule>) moduleClass);
         this.moduleMap.put(className, instance);
+        System.out.println("extends AbstractModule getMoudle" + instance);
         return (T) instance;
       }
 
@@ -107,6 +109,7 @@ public class ModuleManager {
       AbstractModule instance = constructor.newInstance(this.agentInfo,
           this.worldInfo, this.scenarioInfo, this, this.developData);
       this.moduleMap.put(moduleClass.getCanonicalName(), instance);
+      System.out.println("private getMoudle" + instance);
       return instance;
     } catch (NoSuchMethodException | InstantiationException
         | IllegalAccessException | InvocationTargetException e) {
