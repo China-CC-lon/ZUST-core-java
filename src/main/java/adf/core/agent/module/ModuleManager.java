@@ -73,7 +73,6 @@ public class ModuleManager {
 
       AbstractModule instance = this.moduleMap.get(className);
       if (instance != null) {
-        System.out.println("extends AbstractModule getMoudle" + instance);
         return (T) instance;
       }
 
