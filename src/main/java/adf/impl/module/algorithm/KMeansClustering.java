@@ -167,6 +167,7 @@ public class KMeansClustering extends StaticClustering {
 
   @Override
   public int getClusterIndex(EntityID id) {
+    System.out.println("out "+ id);
     for (int i = 0; i < this.clusterSize; i++) {
       if (this.clusterEntityIDsList.get(i).contains(id)) {
         return i;
