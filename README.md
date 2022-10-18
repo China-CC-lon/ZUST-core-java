@@ -12,7 +12,7 @@
 
 ```bash
 
-$ git clone https://github.com/roborescue/adf-core-java.git
+$ git clone https://github.com/roborescue/ZUST-core-java.git
 ```
 
 ## 3. Compile
