@@ -216,6 +216,7 @@ public class KMeansClustering extends StaticClustering {
       this.clusterEntitiesList.put(index, new ArrayList<>());
       this.centerList.add(index, entityList.get(0));
     }
+    System.out.println("Kmeaning ");
     System.out.println("[" + this.getClass().getSimpleName() + "] Cluster : "
         + this.clusterSize);
     // init center
