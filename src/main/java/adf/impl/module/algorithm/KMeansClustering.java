@@ -56,13 +56,13 @@ public class KMeansClustering extends StaticClustering {
 
   public KMeansClustering(AgentInfo ai, WorldInfo wi, ScenarioInfo si, ModuleManager moduleManager, DevelopData developData) {
     super(ai, wi, si, moduleManager, developData);
+    System.out.println("KmeansClustering Starting" );
     this.repeatPrecompute = developData.getInteger(
         "adf.impl.module.algorithm.KMeansClustering.repeatPrecompute", 7);
     this.repeatPreparate = developData.getInteger(
         "adf.impl.module.algorithm.KMeansClustering.repeatPreparate", 30);
     this.clusterSize = developData.getInteger(
         "adf.impl.module.algorithm.KMeansClustering.clusterSize", 5);
-    System.out.println("Init ClusterSize is "+ this.clusterSize);
     if (agentInfo.me().getStandardURN()
         .equals(StandardEntityURN.AMBULANCE_TEAM)) {
       this.clusterSize = scenarioInfo.getScenarioAgentsAt();
